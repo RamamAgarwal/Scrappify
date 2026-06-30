@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 210 20% 98%;
+    --foreground: 210 100% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 100% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 100% 20%;
+
+    --primary: 158 100% 33%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 100% 20%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 217 19% 73%;
+    --muted-foreground: 210 100% 20%;
+
+    --accent: 158 100% 33%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 217 19% 88%;
+    --input: 217 19% 88%;
+    --ring: 158 100% 33%;
+
+    --radius: 0.75rem;
+
+    /* Scrappify brand colors */
+    --brand-green: 158 100% 33%;
+    --brand-blue: 210 100% 20%;
+    --brand-grey: 217 19% 73%;
+    --brand-light: 210 20% 98%;
+
+    /* Gradients */
+    --gradient-eco: linear-gradient(135deg, hsl(158 100% 33%) 0%, hsl(158 80% 45%) 100%);
+    --gradient-tech: linear-gradient(135deg, hsl(210 100% 20%) 0%, hsl(210 100% 35%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(158 100% 33% / 0.1) 0%, hsl(210 100% 20% / 0.1) 100%);
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px hsl(158 100% 33% / 0.1);
+    --shadow-card: 0 8px 30px hsl(210 100% 20% / 0.08);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 210 100% 8%;
+    --foreground: 210 20% 98%;
+
+    --card: 210 100% 12%;
+    --card-foreground: 210 20% 98%;
+
+    --popover: 210 100% 12%;
+    --popover-foreground: 210 20% 98%;
+
+    --primary: 158 100% 40%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 100% 25%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 217 19% 30%;
+    --muted-foreground: 210 20% 85%;
+
+    --accent: 158 100% 40%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 20% 98%;
+
+    --border: 217 19% 25%;
+    --input: 217 19% 25%;
+    --ring: 158 100% 40%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
